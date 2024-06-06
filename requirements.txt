@@ -1,0 +1,13 @@
+llama-index
+llama-index-embeddings-huggingface==0.2.1
+llama-index-llms-llama-cpp
+transformers
+flask
+
+langchain==0.0.12  # Adjust the version as needed
+llama-cpp-python>=0.2.32,<0.3.0
+sentence-transformers>=2.6.1,<3.0.0
+chromadb # Adjust the version as needed
+numpy  # Required by several ML libraries
+torch  # PyTorch is typically needed for model inference
+transformers  # For handling models and embeddings
