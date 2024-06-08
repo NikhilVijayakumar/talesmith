@@ -1,4 +1,4 @@
-# src/lan_rag.py
+# src/rag_test_impl.py
 from langchain_community.llms import LlamaCpp
 from langchain.document_loaders import PyPDFDirectoryLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
@@ -12,7 +12,7 @@ import os
 import threading
 from src.thread.ChainStreamHandler import ChainStreamHandler
 from src.thread.ThreadedGenerator import ThreadedGenerator
-from src.config import Config
+from src.configuration.config import Config
 import datetime
 import re
 

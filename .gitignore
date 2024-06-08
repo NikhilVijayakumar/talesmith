@@ -132,8 +132,12 @@ data/pdfs/*.*
 /.idea/inspectionProfiles/Project_Default.xml
 /.idea/talesmith.iml
 /.idea/vcs.xml
-/data/chroma_db.zip
-/.env
-/data/prompt.txt
-/data/template.txt
+/data/xforge/chroma_db.zip
+/.env.xforge_openchat
+/data/xforge/prompt.txt
+/data/xforge/template.txt
 /data/chroma/
+/data/xforge/
+/.env.xforge_openchat
+/.env.xforge_llama
+/.env
