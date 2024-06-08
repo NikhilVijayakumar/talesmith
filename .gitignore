@@ -125,3 +125,15 @@ ipython_config.py
 
 *.pyc
 data/pdfs/*.*
+/.idea/misc.xml
+/.idea/.gitignore
+/.idea/modules.xml
+/.idea/inspectionProfiles/profiles_settings.xml
+/.idea/inspectionProfiles/Project_Default.xml
+/.idea/talesmith.iml
+/.idea/vcs.xml
+/data/chroma_db.zip
+/.env
+/data/prompt.txt
+/data/template.txt
+/data/chroma/
