@@ -8,7 +8,7 @@ def initialize_llm(generator):
     model = LlamaCpp(
         model_path=Config.MODEL_PATH,
         temperature=0.9,
-        max_tokens=2000,
+        max_tokens=0,
         top_p=3,
         streaming=True,
         callback_manager=CallbackManager([ChainStreamHandler(generator)]),

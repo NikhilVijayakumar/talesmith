@@ -141,3 +141,4 @@ data/pdfs/*.*
 /.env.xforge_openchat
 /.env.xforge_llama
 /.env
+/.idea/encodings.xml

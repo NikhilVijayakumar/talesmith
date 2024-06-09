@@ -5,7 +5,7 @@ from src.configuration.config import Config
 
 
 def main():
-    Config.load_environment(Environment.XFORGE_LLAMA)
+    Config.load_environment(Environment.XFORGE_OPENCHAT)
     generate_story()
 
 
