@@ -1,7 +1,10 @@
 #src/utils/file_utils.py
 import os
 import datetime
+
+from src.configuration.config import Config
 from src.utils.text_utils import clean_text
+
 
 def save_generated_text(generated_text, optional_name=None):
     """
@@ -14,7 +17,7 @@ def save_generated_text(generated_text, optional_name=None):
     cleaned_text = clean_text(generated_text)
 
     # Define the folder path
-    folder_path = 'E:/Python/talesmith/data/story/'
+    folder_path = Config.PDF_DIRECTORY
 
     # Check if the folder exists, if not, create it
     if not os.path.exists(folder_path):

@@ -1,13 +1,9 @@
 # src/configuration.py
 import os
+
 from dotenv import load_dotenv
+
 from src.configuration.environment import Environment
-
-
-
-
-
-
 
 
 class Config:
@@ -21,6 +17,7 @@ class Config:
     PROMPT_FILE_PATH = os.getenv('PROMPT_FILE_PATH')
     TEMPLATE_FILE_PATH = os.getenv('TEMPLATE_FILE_PATH')
     CHROMA_DIRECTORY = os.getenv('CHROMA_DIRECTORY')
+    GENERATED_FILE_PATH = os.getenv('GENERATED_FILE_PATH')
 
     @classmethod
     def load_environment(cls, env: Environment):
@@ -49,6 +46,7 @@ class Config:
         cls.PROMPT_FILE_PATH = os.getenv('PROMPT_FILE_PATH')
         cls.TEMPLATE_FILE_PATH = os.getenv('TEMPLATE_FILE_PATH')
         cls.CHROMA_DIRECTORY = os.getenv('CHROMA_DIRECTORY')
+        cls.GENERATED_FILE_PATH = os.getenv('GENERATED_FILE_PATH')
 
     @classmethod
     def get_prompt(cls):
@@ -86,4 +84,3 @@ class Config:
         print(f"PROMPT_FILE_PATH: {cls.PROMPT_FILE_PATH}")
         print(f"TEMPLATE_FILE_PATH: {cls.TEMPLATE_FILE_PATH}")
         print(f"CHROMA_DIRECTORY: {cls.CHROMA_DIRECTORY}")
-

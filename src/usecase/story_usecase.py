@@ -1,5 +1,4 @@
 # src/usecase/story_usecase.py
-import threading
 
 from src.configuration.config import Config
 from src.llm.model import initialize_llm
