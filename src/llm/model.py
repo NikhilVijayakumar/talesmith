@@ -4,8 +4,8 @@ from langchain.callbacks.manager import CallbackManager
 from src.thread.ChainStreamHandler import ChainStreamHandler
 from src.configuration.config import Config
 
-def initialize_llm(generator):
-    model = LlamaCpp(
+def streaming_llm_init(generator):
+    return LlamaCpp(
         model_path=Config.MODEL_PATH,
         temperature=0.9,
         max_tokens=0,
@@ -15,4 +15,16 @@ def initialize_llm(generator):
         n_ctx=Config.CONTEXT_WINDOW,
         verbose=True,
     )
-    return model
+
+
+def llm_init():
+    return LlamaCpp(
+        model_path=Config.MODEL_PATH,
+        temperature=0.9,
+        max_tokens=0,
+        n_ctx=Config.CONTEXT_WINDOW,
+        verbose=True,
+    )
+
+
+

@@ -2,7 +2,7 @@
 import threading
 
 from src.configuration.config import Config
-from src.llm.model import initialize_llm
+from src.llm.model import streaming_llm_init
 from src.rag.chain import setup_rag_chain
 from src.rag.retriever import load_and_tokenize_documents, setup_vectorstore
 from src.thread.ThreadedGenerator import ThreadedGenerator
@@ -23,7 +23,7 @@ def init():
     docs = load_and_tokenize_documents(Config.PDF_DIRECTORY)
     vectorstore = setup_vectorstore(docs)
     generator = ThreadedGenerator()
-    model = initialize_llm(generator)
+    model = streaming_llm_init(generator)
     rag_chain = setup_rag_chain(vectorstore, model)
     return {
         "generator": generator,

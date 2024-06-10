@@ -17,7 +17,7 @@ def save_generated_text(generated_text, optional_name=None):
     cleaned_text = clean_text(generated_text)
 
     # Define the folder path
-    folder_path = Config.PDF_DIRECTORY
+    folder_path = Config.GENERATED_FILE_PATH
 
     # Check if the folder exists, if not, create it
     if not os.path.exists(folder_path):
