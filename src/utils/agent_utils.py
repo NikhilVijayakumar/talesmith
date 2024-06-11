@@ -1,6 +1,7 @@
 from crewai import Agent, Task
 from langchain_community.llms import LlamaCpp
 import yaml
+import os
 
 
 def create_agent_from_yaml(agent_yaml_file: str, llm: LlamaCpp):
@@ -19,7 +20,7 @@ def create_agent_from_yaml(agent_yaml_file: str, llm: LlamaCpp):
     return agent
 
 
-def create_task_from_yaml(task_yaml_file: str, agent: Agent,context:str):
+def create_task_from_yaml(task_yaml_file: str, agent: Agent, context: str):
     with open(task_yaml_file, 'r') as file:
         config = yaml.safe_load(file)
 
@@ -31,3 +32,10 @@ def create_task_from_yaml(task_yaml_file: str, agent: Agent,context:str):
     )
 
     return task
+
+
+def get_context(file_path):
+    if file_path and os.path.exists(file_path):
+        with open(file_path, 'r') as file:
+            return file.read()
+    return "Generate a story"  # Default prompt if the file is not found
